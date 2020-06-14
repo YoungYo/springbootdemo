@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+    <span th:text="${'Hello Thymeleaf!'}"></span>
+    <hr/>
+    <span th:text="${msg}"></span>
+    <hr/>
+    <input type="text" th:value="${msg}" />
+    <hr/>
+    <span th:text="${#strings.isEmpty(msg)}"></span>
+    <hr/>
+    <span th:text="${#strings.contains(msg, '床前')}"></span> <hr/>
+    <span th:text="${date}"></span> <hr/>
+    <span th:text="${#dates.format(date)}"></span> <hr/>
+    <span th:text="${#dates.format(date, 'yyyy/MM/dd')}"></span>
+</body>
+</html>
