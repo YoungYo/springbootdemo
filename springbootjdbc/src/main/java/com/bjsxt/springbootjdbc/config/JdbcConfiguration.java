@@ -12,7 +12,7 @@ import javax.sql.DataSource;
  * 数据源的JDBC配置类
  * @author wanghao
  */
-@Configuration
+//@Configuration
 //@EnableConfigurationProperties(JdbcProperties.class) //指定加载哪个配置信息属性类
 public class JdbcConfiguration {
 //    @Autowired
