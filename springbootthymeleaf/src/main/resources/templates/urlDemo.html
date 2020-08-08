@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf-URL表达式</title>
+</head>
+<body>
+<a th:href="@{http://www.baidu.com}">打开百度</a> <hr/>
+<a th:href="@{/showPage}">相对路径</a> <hr/>
+<a th:href="@{/receiveRestfulParam/{id}(id=200)}">restful格式传递参数方式一</a>
+</body>
+</html>
