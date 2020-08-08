@@ -50,4 +50,21 @@ public class UserController {
         }
         return "showUsers";
     }
+
+    /**
+     * 预更新用户查询
+     * @param id 用户ID
+     * @return 视图文件名
+     */
+    @RequestMapping("preUpdateUser")
+    public String perUpdateUser(Integer id, Model model) {
+        try {
+            Users users = usersService.getUserById(id);
+            model.addAttribute("user", users);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "error";
+        }
+        return "updateUser";
+    }
 }

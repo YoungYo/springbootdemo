@@ -27,4 +27,9 @@ public class UsersServiceImpl implements UsersService {
     public List<Users> getAllUser() {
         return usersDao.selectAllUsers();
     }
+
+    @Override
+    public Users getUserById(Integer id) {
+        return usersDao.selectUserById(id);
+    }
 }

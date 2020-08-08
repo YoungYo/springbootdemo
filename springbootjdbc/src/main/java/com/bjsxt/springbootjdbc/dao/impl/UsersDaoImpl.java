@@ -5,7 +5,6 @@ import com.bjsxt.springbootjdbc.pojo.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 /**
@@ -32,5 +31,17 @@ public class UsersDaoImpl implements UsersDao {
             users.setUserGender(resultSet.getString("user_gender"));
             return users;
         });
+    }
+
+    @Override
+    public Users selectUserById(Integer id) {
+        String sql = "select * from users where userid=?";
+        Users users = new Users();
+        jdbcTemplate.query(sql, new Object[]{id}, resultSet -> {
+            users.setUserid(resultSet.getInt("userid"));
+            users.setUsername(resultSet.getString("username"));
+            users.setUserGender(resultSet.getString("user_gender"));
+        });
+        return users;
     }
 }

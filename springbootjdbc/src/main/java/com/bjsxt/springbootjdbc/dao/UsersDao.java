@@ -20,4 +20,11 @@ public interface UsersDao {
      * @return Users对象集合
      */
     List<Users> selectAllUsers();
+
+    /**
+     * 根据ID从数据库中查询用户记录
+     * @param id 用户ID
+     * @return Users对象
+     */
+    Users selectUserById(Integer id);
 }

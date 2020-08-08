@@ -20,4 +20,11 @@ public interface UsersService {
      * @return Users对象集合
      */
     List<Users> getAllUser();
+
+    /**
+     * 根据ID获取用户信息
+     * @param id 用户ID
+     * @return Users对象
+     */
+    Users getUserById(Integer id);
 }
