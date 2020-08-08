@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
- * @author bjhl
+ * @author wanghao
  */
 @Service
 public class UsersServiceImpl implements UsersService {
@@ -19,5 +21,10 @@ public class UsersServiceImpl implements UsersService {
     @Transactional
     public void addUser(Users users) {
         usersDao.insertUsers(users);
+    }
+
+    @Override
+    public List<Users> getAllUser() {
+        return usersDao.selectAllUsers();
     }
 }

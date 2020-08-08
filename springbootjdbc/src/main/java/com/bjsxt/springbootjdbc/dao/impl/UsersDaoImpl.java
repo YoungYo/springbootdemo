@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @author wanghao
  */
@@ -18,5 +20,17 @@ public class UsersDaoImpl implements UsersDao {
     public void insertUsers(Users users) {
         String sql = "insert into users(username, user_gender) values(?, ?)";
         jdbcTemplate.update(sql, users.getUsername(), users.getUserGender());
+    }
+
+    @Override
+    public List<Users> selectAllUsers() {
+        String sql = "select * from users";
+        return jdbcTemplate.query(sql, (resultSet, i) -> {
+            Users users = new Users();
+            users.setUserid(resultSet.getInt("userid"));
+            users.setUsername(resultSet.getString("username"));
+            users.setUserGender(resultSet.getString("user_gender"));
+            return users;
+        });
     }
 }
