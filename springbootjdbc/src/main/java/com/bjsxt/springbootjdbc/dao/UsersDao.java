@@ -27,4 +27,10 @@ public interface UsersDao {
      * @return Users对象
      */
     Users selectUserById(Integer id);
+
+    /**
+     * 根据ID更新数据库中的用户信息
+     * @param user Users对象
+     */
+    void updateUser(Users user);
 }

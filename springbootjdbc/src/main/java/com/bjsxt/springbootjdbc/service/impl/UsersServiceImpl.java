@@ -32,4 +32,10 @@ public class UsersServiceImpl implements UsersService {
     public Users getUserById(Integer id) {
         return usersDao.selectUserById(id);
     }
+
+    @Override
+    @Transactional
+    public void updateUser(Users user) {
+        usersDao.updateUser(user);
+    }
 }

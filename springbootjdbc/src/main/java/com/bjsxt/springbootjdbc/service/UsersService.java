@@ -27,4 +27,10 @@ public interface UsersService {
      * @return Users对象
      */
     Users getUserById(Integer id);
+
+    /**
+     * 更新用户信息
+     * @param user Users对象
+     */
+    void updateUser(Users user);
 }

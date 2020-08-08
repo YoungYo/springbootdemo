@@ -67,4 +67,20 @@ public class UserController {
         }
         return "updateUser";
     }
+
+    /**
+     * 更新用户信息
+     * @param users Users对象
+     * @return 视图文件名
+     */
+    @RequestMapping("updateUser")
+    public String updateUser(Users users) {
+        try {
+            usersService.updateUser(users);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "error";
+        }
+        return "updateUser";
+    }
 }

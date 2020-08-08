@@ -44,4 +44,10 @@ public class UsersDaoImpl implements UsersDao {
         });
         return users;
     }
+
+    @Override
+    public void updateUser(Users user) {
+        String sql = "update users set username=?, user_gender=? where userid=?";
+        jdbcTemplate.update(sql, user.getUsername(), user.getUserGender(), user.getUserid());
+    }
 }
