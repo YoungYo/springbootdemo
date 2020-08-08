@@ -5,9 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class PageController {
@@ -24,6 +22,15 @@ public class PageController {
         list.add(new Users("3", "lily", 25));
         list.add(new Users("4", "lucy", 26));
         model.addAttribute("list", list);
+
+        Map<String, Users> map = new HashMap<>();
+        map.put("user1", new Users("1", "admin", 23));
+        map.put("user2", new Users("2", "kevin", 24));
+        map.put("user3", new Users("3", "lily", 25));
+        map.put("user4", new Users("4", "lucy", 26));
+        model.addAttribute("map", map);
         return "index";
     }
+
+
 }

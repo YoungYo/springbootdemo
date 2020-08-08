@@ -51,6 +51,7 @@
         </tr>
     </table>
 -->
+<!--
 <table border="1" width="50%">
     <tr>
         <th>ID</th>
@@ -75,6 +76,22 @@
         <td th:text="${var.even}"></td>
         <td th:text="${var.first}"></td>
         <td th:text="${var.last}"></td>
+    </tr>
+</table>
+<hr/>
+-->
+<table border="1" width="50%">
+    <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr th:each="m : ${map}">
+        <td th:text="${m.key}"></td>
+        <td th:text="${m.value.id}"></td>
+        <td th:text="${m.value.name}"></td>
+        <td th:text="${m.value.age}"></td>
     </tr>
 </table>
 </body>

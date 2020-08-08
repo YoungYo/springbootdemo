@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf-操作域对象</title>
+</head>
+<body>
+<hr/>
+HttpServletRequest: <span th:text="${#request.getAttribute('req')}"/>
+                    <span th:text="${#httpServletRequest.getAttribute('req')}"/>
+<hr/>
+HttpSession: <span th:text="${session.ses}"/>
+             <span th:text="${#httpSession.getAttribute('ses')}"/>
+<hr/>
+Application: <span th:text="${application.app}"/>
+             <span th:text="${#servletContext.getAttribute('app')}"/>
+</body>
+</html>
