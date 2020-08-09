@@ -27,21 +27,21 @@ public class UserPojoServiceImpl implements UserPojoService {
     public List<UserPojo> getAllUser() {
         return userPojoMapper.selectAllUser();
     }
-//
-//    @Override
-//    public UserPojo getUserById(Integer id) {
-//        return userPojoMapper.selectUserById(id);
-//    }
-//
-//    @Override
-//    @Transactional
-//    public void updateUser(UserPojo user) {
-//        userPojoMapper.updateUser(user);
-//    }
-//
-//    @Override
-//    @Transactional
-//    public void deleteUser(Integer id) {
-//        userPojoMapper.deleteUserById(id);
-//    }
+
+    @Override
+    public UserPojo getUserById(Integer id) {
+        return userPojoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    @Transactional
+    public void updateUser(UserPojo user) {
+        userPojoMapper.updateByPrimaryKey(user);
+    }
+
+    @Override
+    @Transactional
+    public void deleteUser(Integer id) {
+        userPojoMapper.deleteByPrimaryKey(id);
+    }
 }

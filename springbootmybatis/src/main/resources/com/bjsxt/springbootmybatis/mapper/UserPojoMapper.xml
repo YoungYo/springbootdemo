@@ -79,32 +79,6 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByExampleSelective" parameterType="map">
-    update wanghao.wh_user
-    <set>
-      <if test="record.userid != null">
-        userid = #{record.userid,jdbcType=INTEGER},
-      </if>
-      <if test="record.username != null">
-        username = #{record.username,jdbcType=VARCHAR},
-      </if>
-      <if test="record.userGender != null">
-        user_gender = #{record.userGender,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update wanghao.wh_user
-    set userid = #{record.userid,jdbcType=INTEGER},
-      username = #{record.username,jdbcType=VARCHAR},
-      user_gender = #{record.userGender,jdbcType=VARCHAR}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.bjsxt.springbootmybatis.pojo.UserPojo">
     update wanghao.wh_user
     <set>

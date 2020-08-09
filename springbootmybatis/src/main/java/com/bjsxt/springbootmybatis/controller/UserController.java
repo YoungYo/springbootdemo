@@ -51,12 +51,11 @@ public class UserController {
         return "showUsers";
     }
 
-/**
+    /**
      * 预更新用户查询
      * @param id 用户ID
      * @return 视图文件名
-     *//*
-
+     */
     @RequestMapping("preUpdateUser")
     public String perUpdateUser(Integer id, Model model) {
         try {
@@ -69,13 +68,11 @@ public class UserController {
         return "updateUser";
     }
 
-    */
-/**
+    /**
      * 更新用户信息
      * @param users UserPojo对象
      * @return 视图文件名
-     *//*
-
+     */
     @RequestMapping("updateUser")
     public String updateUser(UserPojo users) {
         try {
@@ -87,13 +84,11 @@ public class UserController {
         return "ok";
     }
 
-    */
-/**
+    /**
      * 根据ID删除用户
      * @param id 用户ID
      * @return 视图文件名
-     *//*
-
+     */
     @RequestMapping("deleteUser")
     public String deleteUser(Integer id) {
         try {
@@ -104,5 +99,4 @@ public class UserController {
         }
         return "ok";
     }
-*/
 }

@@ -21,28 +21,22 @@ public interface UserPojoService {
      */
     List<UserPojo> getAllUser();
 
-/**
+    /**
      * 根据ID获取用户信息
      * @param id 用户ID
      * @return UserPojo对象
-     *//*
-
+     */
     UserPojo getUserById(Integer id);
 
-    */
-/**
+    /**
      * 更新用户信息
      * @param user UserPojo对象
-     *//*
-
+     */
     void updateUser(UserPojo user);
 
-    */
-/**
+    /**
      * 根据ID删除用户
      * @param id 用户ID
-     *//*
-
+     */
     void deleteUser(Integer id);
-*/
 }
