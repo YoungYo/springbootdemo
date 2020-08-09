@@ -35,13 +35,10 @@ public class UserController {
         return "addUser";
     }
 
-/*
-    */
-/**
+    /**
      * 获取所有用户
      * @return
-     *//*
-
+     */
     @RequestMapping("getAllUser")
     public String getAllUser(Model model) {
         try {
@@ -51,10 +48,9 @@ public class UserController {
             e.printStackTrace();
             return "error";
         }
-        return "showUserPojo";
+        return "showUsers";
     }
 
-    */
 /**
      * 预更新用户查询
      * @param id 用户ID

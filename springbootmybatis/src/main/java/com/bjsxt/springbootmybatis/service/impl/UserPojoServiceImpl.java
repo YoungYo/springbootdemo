@@ -23,10 +23,10 @@ public class UserPojoServiceImpl implements UserPojoService {
         userPojoMapper.insertSelective(users);
     }
 
-//    @Override
-//    public List<UserPojo> getAllUser() {
-//        return userPojoMapper.selectAllUserPojo();
-//    }
+    @Override
+    public List<UserPojo> getAllUser() {
+        return userPojoMapper.selectAllUser();
+    }
 //
 //    @Override
 //    public UserPojo getUserById(Integer id) {

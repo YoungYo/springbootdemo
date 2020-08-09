@@ -15,16 +15,12 @@ public interface UserPojoService {
      */
     void addUser(UserPojo users);
 
-/*
-    */
-/**
+    /**
      * 获取所有的用户
      * @return UserPojo对象集合
-     *//*
-
+     */
     List<UserPojo> getAllUser();
 
-    */
 /**
      * 根据ID获取用户信息
      * @param id 用户ID
