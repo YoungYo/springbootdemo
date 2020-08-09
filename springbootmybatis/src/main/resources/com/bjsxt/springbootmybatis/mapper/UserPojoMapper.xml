@@ -36,13 +36,13 @@
     </where>
   </sql>
   <insert id="insert" parameterType="com.bjsxt.springbootmybatis.pojo.UserPojo">
-    insert into wh_user (userid, username, user_gender
+    insert into wanghao.wh_user (userid, username, user_gender
       )
     values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{userGender,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.bjsxt.springbootmybatis.pojo.UserPojo">
-    insert into wh_user
+    insert into wanghao.wh_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userid != null">
         userid,
@@ -67,7 +67,7 @@
     </trim>
   </insert>
   <update id="updateByExampleSelective" parameterType="map">
-    update wh_user
+    update wanghao.wh_user
     <set>
       <if test="record.userid != null">
         userid = #{record.userid,jdbcType=INTEGER},
@@ -84,7 +84,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update wh_user
+    update wanghao.wh_user
     set userid = #{record.userid,jdbcType=INTEGER},
       username = #{record.username,jdbcType=VARCHAR},
       user_gender = #{record.userGender,jdbcType=VARCHAR}

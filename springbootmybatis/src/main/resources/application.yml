@@ -5,3 +5,6 @@ spring:
     username: root
     password: wh&gxh1314
     type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:/com/bjsxt/springbootmybatis/mapper/*.xml #配置映射配置文件的路径
+#  type-aliases-package: com.bjsxt.springbootmybatis.pojo #定义包别名，使用pojo时可以直接使用pojo的类型，不用加包名了
