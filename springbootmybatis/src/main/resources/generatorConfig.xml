@@ -12,7 +12,7 @@
 
         <!--数据库连接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/wanghao"
-                        userId="root" password="123456" />
+                        userId="root" password="wh&amp;gxh1314" />
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
@@ -28,8 +28,8 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <table tableName="users" domainObjectName="UserPojo"
-               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+        <table tableName="wh_user" domainObjectName="UserPojo"
+               enableCountByExample="false" enableUpdateByExample="true" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" />
     </context>
 </generatorConfiguration>
