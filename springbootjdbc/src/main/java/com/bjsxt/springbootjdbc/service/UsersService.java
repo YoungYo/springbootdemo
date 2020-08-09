@@ -33,4 +33,10 @@ public interface UsersService {
      * @param user Users对象
      */
     void updateUser(Users user);
+
+    /**
+     * 根据ID删除用户
+     * @param id 用户ID
+     */
+    void deleteUser(Integer id);
 }

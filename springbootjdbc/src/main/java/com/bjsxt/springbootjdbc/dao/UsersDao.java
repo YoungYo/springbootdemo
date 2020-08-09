@@ -33,4 +33,10 @@ public interface UsersDao {
      * @param user Users对象
      */
     void updateUser(Users user);
+
+    /**
+     * 根据ID删除数据库中的用户信息
+     * @param id 用户ID
+     */
+    void deleteUserById(Integer id);
 }

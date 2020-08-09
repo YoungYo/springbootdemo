@@ -81,6 +81,22 @@ public class UserController {
             e.printStackTrace();
             return "error";
         }
-        return "updateUser";
+        return "ok";
+    }
+
+    /**
+     * 根据ID删除用户
+     * @param id 用户ID
+     * @return 视图文件名
+     */
+    @RequestMapping("deleteUser")
+    public String deleteUser(Integer id) {
+        try {
+            usersService.deleteUser(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "error";
+        }
+        return "ok";
     }
 }

@@ -50,4 +50,10 @@ public class UsersDaoImpl implements UsersDao {
         String sql = "update users set username=?, user_gender=? where userid=?";
         jdbcTemplate.update(sql, user.getUsername(), user.getUserGender(), user.getUserid());
     }
+
+    @Override
+    public void deleteUserById(Integer id) {
+        String sql = "delete from users where userid = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }
