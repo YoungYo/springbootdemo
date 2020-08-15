@@ -10,11 +10,11 @@ import javax.validation.constraints.NotNull;
  * @author 王浩
  */
 public class User {
-    @NotNull(message = "用户ID不能为空")
+    @NotNull(message = "{userid.notnull}")
     private Integer userid;
-    @NotBlank(message = "用户姓名不能为空")
+    @NotBlank(message = "{username.notnull}")
     private String username;
-    @NotBlank(message = "用户性别不能为空")
+    @NotBlank(message = "{userGender.notnull}")
     private String userGender;
 
     public User() {
