@@ -1,5 +1,7 @@
 package com.bjsxt.springbootvalidate.pojo;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -13,6 +15,7 @@ public class User {
     @NotNull(message = "{userid.notnull}")
     private Integer userid;
     @NotBlank(message = "{username.notnull}")
+    @Length(min = 3, max = 20)
     private String username;
     @NotBlank(message = "{userGender.notnull}")
     private String userGender;
