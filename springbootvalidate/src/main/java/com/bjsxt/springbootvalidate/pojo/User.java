@@ -1,8 +1,20 @@
 package com.bjsxt.springbootvalidate.pojo;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+/**
+ * @NotNull 对引用类型做非空校验
+ * @NotBlank 对字符串类型做非空校验
+ * @NotEmpty 对集合类型做非空校验
+ * @author 王浩
+ */
 public class User {
+    @NotNull
     private Integer userid;
+    @NotBlank
     private String username;
+    @NotBlank
     private String userGender;
 
     public User() {

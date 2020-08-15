@@ -6,8 +6,8 @@
 </head>
 <body>
     <form th:action="@{/user/addUser}" method="post">
-        <input type="text" name="username"/><br/>
-        <input type="text" name="userGender"/><br/>
+        <input type="text" name="username"/><font color="red"><span th:errors="${user.username}"/></font><br/>
+        <input type="text" name="userGender"/><font color="red"><span th:errors="${user.userGender}"/></font><br/>
         <input type="submit" value="提交">
     </form>
 </body>
