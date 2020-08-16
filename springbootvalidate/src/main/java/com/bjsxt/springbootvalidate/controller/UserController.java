@@ -18,7 +18,7 @@ import java.util.List;
 public class UserController {
 
     @RequestMapping("addUserPage")
-    public String addUserPage() {
+    public String addUserPage(User user) {
         return "addUser";
     }
 
