@@ -6,12 +6,15 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Controller
 @RequestMapping("/user")
+@Validated
 public class UserController {
 
     @RequestMapping("addUserPage")
@@ -32,6 +35,12 @@ public class UserController {
             return "addUser";
         }
         System.out.println(user);
+        return "ok";
+    }
+
+    @PostMapping("findUser")
+    public String findUser(@NotBlank String username) {
+        System.out.println(username);
         return "ok";
     }
 }
