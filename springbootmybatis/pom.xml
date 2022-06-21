@@ -40,7 +40,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
+            <version>8.0.28</version>
         </dependency>
         <!--添加Druid数据源依赖-->
         <dependency>
@@ -78,7 +78,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>8.0.21</version>
+                        <version>8.0.28</version>
                     </dependency>
                 </dependencies>
 <!--                指定配置文件的路径，其中${project.basedir}表示的是项目根路径-->
